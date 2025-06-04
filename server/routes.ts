@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertAssessmentSchema, type TrainingTrack, type AssessmentResponses } from "@shared/schema";
-import { generateTrainingTrackWithAI } from "./ai-service";
+import { generateTrainingTrackWithAI } from "../ai-service";
 import { sendPersonalizedTrainingEmailViaSendGrid } from "./sendgrid-service";
 
 export async function registerRoutes(app: Express): Promise<Server> {
